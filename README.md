@@ -7,8 +7,8 @@ For starting Rviz simulation
 - roslaunch rover_base init_rover.launch
 
 For moving around
--roslaunch rover_navigation move_base.launch
+- roslaunch rover_navigation move_base.launch
 
 For autonomous mission
--roslaunch rover_send_point autonomous.launch
+- roslaunch rover_send_point autonomous.launch
 
