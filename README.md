@@ -5,8 +5,10 @@ This code uses husky's control.launch files. Therefore first you need to build h
 
 For starting Rviz simulation 
 - roslaunch rover_base init_rover.launch
+
 For moving around
 -roslaunch rover_navigation move_base.launch
+
 For autonomous mission
 -roslaunch rover_send_point autonomous.launch
 
