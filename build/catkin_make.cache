@@ -1,0 +1,2 @@
+openni_launch:rover_base:rover_control:rover_navigation:rover_send_point
+-DCATKIN_DEVEL_PREFIX=/home/hgaren/catkin_ws1/devel -DCMAKE_INSTALL_PREFIX=/home/hgaren/catkin_ws1/install -G Unix Makefiles

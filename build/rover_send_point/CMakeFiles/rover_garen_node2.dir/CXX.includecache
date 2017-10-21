@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hgaren/catkin_ws1/src/rover_send_point/src/send_serial.cpp
+cereal_port/CerealPort.h
+-
+std_msgs/String.h
+/home/hgaren/catkin_ws1/src/rover_send_point/src/std_msgs/String.h
+

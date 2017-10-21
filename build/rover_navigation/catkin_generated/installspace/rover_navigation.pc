@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/install
+
+Name: rover_navigation
+Description: Description of rover_navigation
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hgaren/catkin_ws1/install/lib 
+Requires: 

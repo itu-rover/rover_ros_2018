@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/install
+
+Name: robot_controller
+Description: Description of robot_controller
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/hgaren/catkin_ws1/install/lib 
+Requires: 

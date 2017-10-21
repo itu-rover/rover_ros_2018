@@ -1,0 +1,6 @@
+set(motor_controller_SETUP_PY_VERSION "1.0.0")
+set(motor_controller_SETUP_PY_SCRIPTS "")
+set(motor_controller_SETUP_PY_PACKAGES "roverlib")
+set(motor_controller_SETUP_PY_PACKAGE_DIRS "src/roverlib")
+set(motor_controller_SETUP_PY_MODULES "")
+set(motor_controller_SETUP_PY_MODULE_DIRS "")

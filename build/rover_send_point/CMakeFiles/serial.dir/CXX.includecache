@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hgaren/catkin_ws1/src/rover_send_point/src/serial/src/serial.cc
+algorithm
+-
+alloca.h
+-
+serial/serial.h
+/home/hgaren/catkin_ws1/src/rover_send_point/src/serial/src/serial/serial.h
+serial/impl/win.h
+/home/hgaren/catkin_ws1/src/rover_send_point/src/serial/src/serial/impl/win.h
+serial/impl/unix.h
+/home/hgaren/catkin_ws1/src/rover_send_point/src/serial/src/serial/impl/unix.h
+

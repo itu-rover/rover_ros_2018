@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hgaren/catkin_ws1/src/rover_deneme/src/deneme.cpp
+ros/ros.h
+/home/hgaren/catkin_ws1/src/rover_deneme/src/ros/ros.h
+geometry_msgs/Twist.h
+/home/hgaren/catkin_ws1/src/rover_deneme/src/geometry_msgs/Twist.h
+std_msgs/String.h
+/home/hgaren/catkin_ws1/src/rover_deneme/src/std_msgs/String.h
+
