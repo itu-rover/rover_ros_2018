@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/devel
+
+Name: rover_deneme
+Description: Description of rover_deneme
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hgaren/catkin_ws1/devel/lib 
+Requires: roscpp rospy std_msgs geometry_msgs message_runtime actionlib move_base_msgs nav_msgs

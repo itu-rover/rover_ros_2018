@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/devel
+
+Name: rover_vision
+Description: Description of rover_vision
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/hgaren/catkin_ws1/devel/lib 
+Requires: 

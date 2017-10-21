@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/devel
+
+Name: ax2550
+Description: Description of ax2550
+Version: 0.1.1
+Cflags: -I/home/hgaren/catkin_ws1/devel/include -I/home/hgaren/catkin_ws1/src/ax2550/include
+Libs: -L/home/hgaren/catkin_ws1/devel/lib -lax2550
+Requires: geometry_msgs nav_msgs roscpp serial tf

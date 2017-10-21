@@ -1,0 +1,8 @@
+prefix=/home/hgaren/catkin_ws1/devel
+
+Name: motor_controller
+Description: Description of motor_controller
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/hgaren/catkin_ws1/devel/lib 
+Requires: 
