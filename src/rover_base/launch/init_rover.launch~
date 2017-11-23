@@ -2,24 +2,21 @@
 <launch>
 
 
-  <include file="$(find rover_description)/launch/display.launch"/>
+ <include file="$(find rover_description)/launch/display.launch"/>
   
-  <include file="$(find rover_control)/launch/control.launch"/>
+  <include file="$(find husky_control)/launch/control.launch"/>
     <!--<include file="$(find rover_description)/launch/gazebo.launch"/>-->
 
   <node name="rover" pkg="joint_state_publisher" type="joint_state_publisher">
     <param name="use_gui" value="false" />
   </node>
-  <node name="rover_simulator_garen_controller" pkg="rover_control" type="rover_garen2_control.py">
+  
 
-    <!--remap from="/husky_velocity_controller/odom" to="/odom_combined"/-->
-  </node>
+<node name="rover_garen2_control" pkg="rover_control" type="rover_garen2_control.py"/>
+<node name="rover_cmd_sub" pkg="rover_send_point" type="rover_cmd_sub.py"/>
 
+   
 
-    <node name="rover_cmd_sub" pkg="rover_send_point" type="rover_cmd_sub.py"/>
- 
-
- 
 
  <!-- <include file="$(find rover_navigation)/launch/rover_scan.launch"/>-->
 

@@ -9,7 +9,7 @@ import tf
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import Point, Pose, Quaternion, Twist, Vector3
 from std_msgs.msg import String
-from rover_control.msg import serial
+
 
 class VelocityController(object):
     def __init__(self):
@@ -27,11 +27,9 @@ class VelocityController(object):
         self.current_time =  rospy.Time.now()
         self.last_time =  rospy.Time.now()
         
-        self.serial_pub = rospy.Publisher('rover_serial', serial , queue_size = 50 )
+        
         self.odom_pub = rospy.Publisher('/husky_velocity_controller/odom', Odometry, queue_size = 50)
-        self.odom_combined_pub = rospy.Publisher('/odom_combined', PoseWithCovarianceStamped, queue_size = 50)
         self.twist = Twist()
-        self.msg= serial()
         self.controller()
     
 
@@ -40,28 +38,7 @@ class VelocityController(object):
         self.twist.linear.x = data.linear.x 
         self.twist.linear.y = data.linear.y 
         self.twist.angular.z = data.angular.z
-        if self.twist.angular.z < 0:
-            self.angular_way = "0"
-            self.rover_angular_speed = -self.twist.angular.z
-        else:
-            self.angular_way = "1"
-            self.rover_angular_speed = self.twist.angular.z
-
-        # Linear Speed
-        self.rover_linear_speed = int(self.twist.linear.x*99/0.5)
-        if self.rover_linear_speed < 10:
-            self.rover_linear_speed_str = "0" + str(self.rover_linear_speed)
-        else:
-            self.rover_linear_speed_str = str(self.rover_linear_speed)
-
-        # Angular Speed
-        self.rover_angular_speed = int(self.rover_angular_speed*99)
-        if self.rover_angular_speed < 10:
-            self.rover_angular_speed_str = "0" + str(self.rover_angular_speed)
-        else:
-            self.rover_angular_speed_str = str(self.rover_angular_speed)      
-        self.msg.cmd_vel="a"
-    
+  
 
 
     def controller(self):
@@ -97,15 +74,12 @@ class VelocityController(object):
             self.odom.child_frame_id = "base_link"
             self.odom.twist.twist = Twist(Vector3(self.vx, self.vy, 0), Vector3(0, 0, self.vth))
             # Subscriber(s)
-            self.pwcs = PoseWithCovarianceStamped()
-            self.pwcs.header.stamp = self.odom.header.stamp
-            self.pwcs.header.frame_id = "odom"
-            self.pwcs.pose.pose = self.odom.pose.pose
+           
             self.last_time = self.current_time
             rospy.Subscriber('/husky_velocity_controller/cmd_vel', Twist, self.callback)
+            #rospy.Subscriber('/rover_serial_sensor',String, self.callback_sensor)
             # Publisher(s)
             self.odom_pub.publish(self.odom) 
-            self.odom_combined_pub.publish(self.pwcs)
             rate.sleep()
              
 

@@ -24,7 +24,11 @@
     type="rviz"
     args="-d $(find rover_description)/urdf.rviz" /-->
 
-
+    <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find rover_base)/rviz/rover_sim.rviz" />
 </launch>
 
 
